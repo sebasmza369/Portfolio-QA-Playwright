@@ -28,7 +28,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Ejecutar pruebas Smoke
-        run: npx playwright test tests/portfolio --project=chromium --grep "@smoke" --workers=1 --reporter=line, html
+        run: npx playwright test tests/portfolio --project=chromium --grep "@smoke" --workers=1 --reporter=line,html
       
       - name: Guardar informe HTML
         if: ${{ !cancelled() }}
