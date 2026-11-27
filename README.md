@@ -70,9 +70,9 @@ y así obtener las evidencias de que los test pasan sin probar toda la suite ent
 
 ## Integración continua
 
-Este proyecto utiliza GitHub Actions para ejecutar automaticamente nuestras pruebas en workflows.
+Este proyecto utiliza GitHub Actions para ejecutar automáticamente nuestras pruebas smoke de Playwright.
 
-Las pruebas Smoke se ejecutan cuando github actions incial el workflows
+Las pruebas Smoke se ejecutan automáticamente cuando hacemos push a main, abrimos o actualizamos una Pull Request dirigida a main, o iniciamos el workflow manualmente.
 
 Los resultados pueden consultarse en la pestaña Actions.
 El informe HTML queda disponible como artefacto de la ejecución durante siete días.
