@@ -16,8 +16,6 @@ El comando para ejecutar las pruebas es: npx playwright test --project=chromium
 
 ## Instalación
 
-## Instalación
-
 Para instalar y ejecutar las pruebas, abre una terminal
 en la carpeta principal del proyecto.
 
@@ -25,6 +23,7 @@ en la carpeta principal del proyecto.
 
    ```bash
    npm ci
+   ```
 
 2. Instalar Chromium:
  
@@ -68,3 +67,12 @@ Las pruebas Smoke me han ayudado a comprobar rápidamente algunas funcionalidade
 npx playwright test tests/portfolio --project=chromium --grep "@smoke"
 ```
 y así obtener las evidencias de que los test pasan sin probar toda la suite entera. La ejecución ha funcionado y he obtenido 2 passed.
+
+## Integración continua
+
+Este proyecto utiliza GitHub Actions para ejecutar automáticamente nuestras pruebas smoke de Playwright.
+
+Las pruebas Smoke se ejecutan automáticamente cuando hacemos push a main, abrimos o actualizamos una Pull Request dirigida a main, o iniciamos el workflow manualmente.
+
+Los resultados pueden consultarse en la pestaña Actions.
+El informe HTML queda disponible como artefacto de la ejecución durante siete días.
